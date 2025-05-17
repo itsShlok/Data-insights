@@ -1,0 +1,42 @@
+1. What is Normalization & Standardization and how is it helpful?
+Normalization and Standardization are feature scaling techniques used in data preprocessing.
+
+🔹 Normalization (Min-Max Scaling): Definition: Rescales data to a fixed range, usually [0, 1].
+
+Use Case: Best when features do not follow a normal distribution and you're using distance-based algorithms (e.g., KNN, K-Means).
+
+🔹 Standardization (Z-score Scaling): Definition: Rescales data to have mean = 0 and standard deviation = 1.
+
+Use Case: Suitable when features follow a Gaussian distribution or for models that assume normally distributed features (e.g., linear regression, logistic regression, PCA).
+
+✅ Why helpful? Ensures fair contribution of features during modeling.
+
+Improves convergence speed in gradient-based models (e.g., SVM, neural networks).
+
+Prevents features with larger scales from dominating those with smaller scales.
+
+2. What techniques can be used to address multicollinearity in multiple linear regression?
+Multicollinearity occurs when two or more independent variables are highly correlated, which can lead to unstable coefficient estimates.
+
+🔧 Techniques to address it: Remove highly correlated features:
+
+Use a correlation matrix or Variance Inflation Factor (VIF) to identify redundant variables.
+
+Drop one of the correlated features.
+
+Principal Component Analysis (PCA):
+
+Transforms correlated variables into a smaller set of uncorrelated components.
+
+Regularization techniques:
+
+Ridge Regression (L2): Shrinks coefficients to reduce model variance.
+
+Lasso Regression (L1): Can eliminate redundant variables by shrinking coefficients to zero.
+
+Domain Knowledge:
+
+Use understanding of the business or scientific context to decide which variable to keep.
+
+Combine correlated features:
+
